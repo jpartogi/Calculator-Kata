@@ -24,7 +24,7 @@ public class CalculatorTest {
 	}
 
 	@Test
-	@Parameters({"2"})
+	@Parameters({"1", "2", "3"})
 	public void oneReturnsNumber(String num) 
 	{
 		Calculator calc = new Calculator();
