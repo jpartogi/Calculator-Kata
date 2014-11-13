@@ -1,12 +1,16 @@
 package leanagile;
 
+import junitparams.JUnitParamsRunner;
+import junitparams.Parameters;
+
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import static org.mockito.Mockito.*;
-
 import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.*;
 
+@RunWith(JUnitParamsRunner.class)
 public class CalculatorTest {
 
 	@Test
@@ -20,13 +24,14 @@ public class CalculatorTest {
 	}
 
 	@Test
-	public void oneReturnsNumber() 
+	@Parameters({"2"})
+	public void oneReturnsNumber(String num) 
 	{
 		Calculator calc = new Calculator();
 		
-		int result = calc.add("1");
+		int result = calc.add(num);
 		
-		assertThat(result, equalTo(1) );
+		assertThat(result, equalTo( Integer.parseInt(num) ) );
 	}
 
 }
