@@ -24,14 +24,14 @@ public class CalculatorTest {
 	}
 
 	@Test
-	@Parameters({"1", "2", "3"})
-	public void oneReturnsNumber(String num) 
+	//@Parameters({"1", "2", "3"})
+	public void oneReturnsNumber() 
 	{
 		Calculator calc = new Calculator();
 		
-		int result = calc.add(num);
+		int result = calc.add("1,3");
 		
-		assertThat(result, equalTo( Integer.parseInt(num) ) );
+		assertThat(result, equalTo( 4 ));
 	}
 
 }
