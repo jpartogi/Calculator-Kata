@@ -1,0 +1,17 @@
+plugins {
+    id 'java-library'
+}
+
+allprojects {
+    apply plugin: 'base'
+
+    repositories {
+        jcenter()
+    }
+}
+
+dependencies {
+  implementation 'pl.pragmatists:JUnitParams:1.0.3'
+  implementation 'org.mockito:mockito-core:3.0.0'
+  testImplementation 'junit:junit:4.12'
+}
